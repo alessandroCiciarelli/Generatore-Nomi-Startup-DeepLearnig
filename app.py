@@ -120,14 +120,14 @@ def main():
 		with col4:
 			min_word_len = st.slider('Lunghezza minima del nome :', 3, 50,5,1)
 		with col5:
-			suffix = st.text_input('In che ambito opera la tua startup', ' Software')
+			suffix = st.text_input('In che ambito opera la tua startup', 'Software')
 		
 
 		cfg = sng.Config(
 		    epochs = epochs,
 		    max_word_len = max_word_len,
 		    min_word_len = min_word_len,
-		    suffix = suffix
+		    suffix = " " + suffix
 		)
 		#st.write("Configurazione Salvata con successo ")
 		#st.write(cfg.to_dict())
@@ -168,7 +168,7 @@ def main():
 			temperature = st.slider('Temperatura :', 0.1, 2.1,1.0,0.1)
 
 
-		suffix = st.text_input('In che ambito opera la tua startup', ' Software')
+		suffix = st.text_input('In che ambito opera la tua startup', 'Software')
 
 
 		cfg = sng.Config(
@@ -179,7 +179,7 @@ def main():
 		    min_word_len = min_word_len,
 		    n_layers = n_layers,
 		    temperature = temperature,
-		    suffix = suffix
+		    suffix = " " + suffix
 		)
 		st.write("Configurazione Salvata con successo ")
 		st.write(cfg.to_dict())
